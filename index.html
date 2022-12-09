@@ -6,8 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Fuzzy+Bubbles:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@300;400;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/236089cb69.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <!--! NAVBAR start  -->
+    <nav>
+      <div class="navbar_container">
+        <a href="#"
+          ><img class="insta_logo" src="./img/Instagram-logo.jpeg" alt="error"
+        /></a>
+        <input class="navbar_input" type="text" placeholder="Поиск" />
+      </div>
+    </nav>
+    <!--! NAVBAR end  -->
+
+    <!--! MAIN start  -->
+    <main>
+      <div class="main_container">
+        <img class="user_logo" src="./img/user.png" alt="error" />
+
+        <h2 class="user_name">user123</h2>
+        <p class="user_describe">Личный блог</p>
+
+        <h3 class="followers">0 Подписчиков</h3>
+        <h3 class="subscr">0 Подписок</h3>
+      </div>
+      <hr/>
+    </main>
+    <!--! MAIN end  -->
+
+    <!--! FOOTER start  -->
+    <footer>
+      <div class="footer_container">
+        <span class="publ">ПУБЛИКАЦИИ</span>
+      </div>
+      <button class="share">Поделиться фото</button>
+
+      <div class="main_modal">
+        <div class="inner_modal">
+          <button class="cancel">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+          </button>
+          <textarea
+            class="sign"
+            name=""
+            id=""
+            cols="30"
+            placeholder="Добавьте подпись..."
+          ></textarea>
+          <input class="image" type="text" placeholder="Укажите фото (URL)" />
+          <button class="publish">Опубликовать</button>
+        </div>
+      </div>
+    </footer>
+    <!--! FOOTER end  -->
+
+    <!--! MODAL EDIT start  -->
+    <div class="edit-main_modal">
+        <div class="edit-inner_modal">
+          <button class="edit-cancel">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+          </button>
+          <textarea
+            class="edit-sign"
+            name=""
+            id=""
+            cols="30"
+            placeholder="Внесите изменения в подписи..."
+          ></textarea>
+          <input class="edit-image" type="text" placeholder="Внесите изменения ссылки для фото (URL)" />
+          <button class="edit-save">Сохранить</button>
+        </div>
+      </div>
+    </footer>
+    <!--! MODAL EDIT end   -->
+
+    <!--! POST FORM start  -->
+    <div class="post-list"></div>
+    <div class="card">
+            <img class="post_avatar" src="./img/user.png" alt=""> <strong>user123</strong>
+            <img class="post_picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf2J48SKVzm8avnAciFVnJaVPzyWHYwsGajw&usqp=CAU" alt="">
+            <div>
+            <a href="#"><i class="fa-solid fa-heart"></i><div></div></a>
+            <a href="#"><i class="fa-regular fa-comment"></i> </a>
+            <a href="#"><i class="fa-regular fa-paper-plane"></i></a>
+            <a href="#"><i class="fa-solid fa-bookmark"></i>0</a>
+        </div>
+            <strong>user123</strong>  <span class="post_sign">hahahahah</span>   
+            <button class="btn_delete">Удалить</button>
+            <button class="btn_edit">Редакт...</button>
+
+    </div>
+    <!--! POST FORM end  -->
     <script src="./main.js"></script>
   </body>
 </html>
