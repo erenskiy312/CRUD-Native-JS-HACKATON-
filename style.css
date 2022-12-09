@@ -226,3 +226,9 @@ hr {
   width: 107%;
 }
 /*! POST FORM end  */
+
+.icons {
+  border: none;
+  display: inline-flex;
+  cursor: pointer;
+}

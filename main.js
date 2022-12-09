@@ -20,6 +20,8 @@ let btnSave = document.querySelector(".edit-save");
 let search = document.querySelector(".navbar_input");
 let searchVal = "";
 
+//! Элементы для нажатия лайка
+
 //! Открытие модального окна для публикации поста
 btnShare.addEventListener("click", async function () {
   modal.style.display = "block";
@@ -71,10 +73,10 @@ async function render() {
         <img class="post_avatar" src="./img/user.png" alt=""> <strong>user123</strong>
         <img class="post_picture" src="${elem.inpImage}" alt="">
         <div>
-        <a href="#"><i class="fa-solid fa-heart"></i>0</a>
-        <a href="#"><i class="fa-regular fa-comment"></i> </a>
-        <a href="#"><i class="fa-regular fa-paper-plane"></i></a>
-        <a href="#"><i class="fa-solid fa-bookmark"></i>0</a>
+        <button class="icons" id="btnLike" ><i class="fa-solid fa-heart"></i><div id="likeCount">0</div></button>
+            <button class="icons"><i class="fa-regular fa-comment"></i></button>
+            <button class="icons"><i class="fa-regular fa-paper-plane"></i></button>
+            <button class="icons" id="btnFav"><i class="fa-solid fa-bookmark"></i> <div id="favCount">0</div><button>
     </div>
         <strong>user123</strong>  <span class="post_sign">${elem.inpSign}</span>
         <button class="btn_delete" id="${elem.id}">Удалить</button>
@@ -154,4 +156,24 @@ document.addEventListener("click", async function (e) {
 search.addEventListener("input", () => {
   searchVal = search.value;
   render();
+});
+
+let btnLike = document.querySelector("#btnLike");
+let likeCount = document.querySelector("#likeCount").innerHTML;
+let like = true;
+
+btnLike.addEventListener("click", function () {
+  likeCount = like ? ++likeCount : --likeCount;
+  like = !like;
+  document.querySelector("#likeCount").innerHTML = likeCount;
+});
+
+let btnFav = document.querySelector("#btnFav");
+let favCount = document.querySelector("#favCount").innerHTML;
+let favorite = true;
+
+btnFav.addEventListener("click", function () {
+  favCount = favorite ? ++favCount : --favCount;
+  favorite = !favorite;
+  document.querySelector("#favCount").innerHTML = favCount;
 });
